@@ -1,9 +1,9 @@
 import WeatherCard from './components/WeatherCard'
 import './App.css'
-import { useState, useRef, useEffect, useMemo } from 'react'
+import { useState, useRef, useEffect,useMemo } from 'react'
 import { fetchCoordinates } from './api/geo'
 import { fetchWeatherByCoords } from './api/weather'
-import { getColorByWeatherId } from './data/bgColor'
+import {getColorByWeatherId} from './data/bgColor'
 function App() {
 
   const [city, setCity] = useState('seoul')
@@ -17,9 +17,13 @@ function App() {
     inputRef.current.focus()
   }, [])
 
+
   const bg = useMemo(()=>{
-    const weatherId = weather?.weather?.[0]?.id
-  }, [weather])
+    const weatherId =weather?.weather?.[0]?.id
+
+    return getColorByWeatherId(weatherId ?? 0)
+
+  },[weather])
 
   const handleSearch = async () => {
     const q = city.trim()
@@ -49,9 +53,9 @@ function App() {
     if (e.key === 'Enter') handleSearch()
   }
   return (
-    <div className='app' style={{backgroundColor:`${bg}`}}>
+    <div className='app' style={{background:`${bg}`}}>
       <div className="container">
-        <h1>정예준의 날씨앱</h1>
+        <h1>***의 날씨앱</h1>
         <div className="input-wrap">
           <input
             value={city}
@@ -66,7 +70,7 @@ function App() {
         </div>
         {err && <p>{err}</p>}
         {loading && <p>불러오는 중....</p>}
-        <WeatherCard weather = {weather}/>
+        <WeatherCard weather={weather}/>
       </div>
     </div>
   )
