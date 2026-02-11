@@ -53,7 +53,11 @@ function App() {
     if (e.key === 'Enter') handleSearch()
   }
   return (
-    <div className='app' style={{background:`${bg}`}}>
+    <div className='app' 
+    style={{backgroundImage: `url(${bg})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat'}}>
       <div className="container">
         <h1>***의 날씨앱</h1>
         <div className="input-wrap">
