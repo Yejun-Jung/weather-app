@@ -1,16 +1,15 @@
-# React + Vite
+# 날씨 앱 ⛅
+OpenWeatherMap API를 활용한 날씨 검색 앱입니다.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 프로젝트 소개
+도시명을 검색하면 현재 날씨 정보를 조회하고, 날씨 상태에 따라 배경 이미지가 자동으로 변경됩니다.
 
-Currently, two official plugins are available:
+## ⚙️ 주요 기능
+- 기온 / 습도 / 아이콘 및 배경 이미지 자동 변경
+- 로딩 및 에러 상태 처리
+- 입력창 자동 포커스
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 사용 기술
+- React
+- Vite / Axios
+- OpenWeatherMap API
